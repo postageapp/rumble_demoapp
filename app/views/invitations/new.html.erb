@@ -1,0 +1,38 @@
+<%- if (flash[:error]) %>
+<div class="flash error">
+<em><%= flash[:error] %></em>
+</div>
+<% end %>
+
+<% form_tag(invitations_path, :method => :post) do %>
+  <div>
+    <%= label_tag(:team, 'Team Name') %>
+  </div>
+  <div>
+    <%= text_field_tag(:team) %>
+  </div>
+  <div>
+    <%= label_tag(:user, 'User Name') %>
+  </div>
+  <div>
+    <%= text_field_tag(:user) %>
+  </div>
+  <div>
+    <%= label_tag(:emails) %>
+  </div>
+  <div>
+    <%= text_field_tag(:emails, '', :name => 'emails[]') %>
+  </div>
+  <div>
+    <%= text_field_tag(:emails, '', :name => 'emails[]') %>
+  </div>
+  <div>
+    <%= text_field_tag(:emails, '', :name => 'emails[]') %>
+  </div>
+  <div>
+    <%= text_field_tag(:emails, '', :name => 'emails[]') %>
+  </div>
+  <div>
+    <%= submit_tag %>
+  </div>
+<% end %>
